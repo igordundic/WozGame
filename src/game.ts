@@ -55,7 +55,8 @@ class Game {
         let hobbitvillage = new Room("are back in the Hobbitvillage. The dragon is very close. The dragon is burning everything. The people in this village are screeming and fleeing. You are now stuck in a house, and you wanna open the door but it is locked. On the floor there's a ax. Pick it up and use it to break the door to go outside. When you opened the door, take a horse and this road to the bunker, you very close. Be quick before it's to late. ");
         let Backinthebunker = new Room("in the Bunker. You and Kendra are still not safe. You have taken the tunnel and came out somewhere else. The dragon burned the bunker but Kendra is rescued and you have won the game. Congratz !!");
 
-        //create the items
+        //create the items.
+        // Deze items heb ik voorheen al aangemaakt en daarom heb ik deze mee gepushed naar de eerste versie van de game.
         let key = new Key("Key", "You have found a key and you can open the door right now.");
         let weapon = new Sword("Sword", "You have found a weapon and you can kill the dragon.", 50);
         let axe = new Axe("Axe", "You have picked up the Axe, and can now break the door open. ", 100);
