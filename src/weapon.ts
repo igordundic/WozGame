@@ -1,3 +1,4 @@
+/// <reference path="item.ts"/>
 class Weapon extends Item {
     damage: number;
 
