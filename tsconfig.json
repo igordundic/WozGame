@@ -2,14 +2,14 @@
     "compilerOptions": {
         "module": "system",
         "noImplicitAny": true,
-        "outFile": "main.js",
+        "outFile": "js/main.js",
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": false
     },
 
     "include" : [
-        "src/*"
+        "src/*.ts"
     ]
 
 }
