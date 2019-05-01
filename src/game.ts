@@ -20,6 +20,8 @@ class Game {
     out : Printer;
     inventory:Item;
     currentRoom : Room;
+    private : Player; // Als het goed is moet dit goed zijn
+
 
     isOn : boolean;
 
@@ -56,7 +58,6 @@ class Game {
         let Backinthebunker = new Room("in the Bunker. You and Kendra are still not safe. You have taken the tunnel and came out somewhere else. The dragon burned the bunker but Kendra is rescued and you have won the game. Congratz !!");
 
         //create the items.
-        // Deze items heb ik voorheen al aangemaakt en daarom heb ik deze mee gepushed naar de eerste versie van de game.
         let key = new Key("Key", "You have found a key and you can open the door right now.");
         let weapon = new Sword("Sword", "You have found a weapon and you can kill the dragon.", 50);
         let axe = new Axe("Axe", "You have picked up the Axe, and can now break the door open. ", 100);
@@ -260,4 +261,16 @@ class Game {
             return true;  // signal that we want to quit
         }
     }
+
+    useItem(i:Item){
+        i.useitem();
+   
+    }
+
+    useKey(k:Key){
+        k.useKey();
+    }
+    
+
+    
 }

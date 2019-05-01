@@ -11,10 +11,15 @@
 class Item {
     name : string;
     description : string;
+
+    useitem(){
+        console.log("");
+    }
     
     constructor (name: string, description:string){
         this.name = name;
         this.description = description;
+
         
     }
 }

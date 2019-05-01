@@ -59,6 +59,12 @@ class Parser {
             case "get" :
                 this.game.pickupItem(this.game.currentRoom.inventory);
                 break;
+            case "open" :
+                this.game.useKey(<Key>this.game.currentRoom.inventory);
+                break;
+            case "use" :
+                this.game.useItem(this.game.currentRoom.inventory);
+                break;
             case "quit" : 
                 wantToQuit = this.game.quit(params);
                 break;
