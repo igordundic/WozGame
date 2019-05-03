@@ -6,6 +6,7 @@
  * 
  * @author  Milad Rahmani
  * @version 1.0
+ * This is a sample code written in java. But it must be in Typescript. It is intended to give a kind of idea or help how it can be supplemented.
  */
  public class Player  {
     /*
@@ -71,7 +72,3 @@
         
 
 } 
-
-// * Game heeft een instantie van een player
-// * Player houd de current room bij
-// * Player houd bij welke items zijn opgepakt/gedropt
