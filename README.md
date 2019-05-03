@@ -1,2 +1,2 @@
 # WozGame
-A typescript project by Milad Rahmani. This is for finishing my P at HZ University of Applied Sciences. 
+A typescript project. This is for finishing my P at HZ University of Applied Sciences. 
