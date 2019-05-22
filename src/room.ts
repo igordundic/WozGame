@@ -14,7 +14,7 @@
  */
 class Room {
     description : string;
-
+    out : Printer;
     inventory: Item;
 
     northExit : Room;
@@ -72,6 +72,67 @@ class Room {
     additem(item:Item){
         this.inventory = item;
     }
+    
+    /** 
+     * Try to go in one direction. If there is an exit, enter
+     * the new room, otherwise print an error message.
+     * 
+     * @param params array containing all parameters
+     * @return true, if this command quits the game, false otherwise.
+     */
+    goRoom(params : string[]) : boolean {
+        if(params.length == 0) {
+            // if there is no second word, we don't know where to go...
+            this.out.println("Go where?");
+            return;
+        }
+
+        let direction = params[0];
+
+        // Try to leave current room.
+        let nextRoom = null;
+        switch (direction) {
+            case "north" : 
+                nextRoom = this.currentRoom.northExit;
+                break;
+            case "east" : 
+                nextRoom = this.currentRoom.eastExit;
+                break;
+            case "south" : 
+                nextRoom = this.currentRoom.southExit;
+                break;
+            case "west" : 
+                nextRoom = this.currentRoom.westExit;
+                break;
+        }
+
+        if (nextRoom == null) {
+            this.out.println("There is no way?!");
+        }
+        else {
+            this.currentRoom = nextRoom;
+            this.out.println("You are " + this.currentRoom.description);
+            this.out.print(" go ");
+            if(this.currentRoom.northExit != null) {
+                this.out.print("north ");
+            }
+            if(this.currentRoom.eastExit != null) {
+                this.out.print("east ");
+            }
+            if(this.currentRoom.southExit != null) {
+                this.out.print("south ");
+            }
+            if(this.currentRoom.westExit != null) {
+                this.out.print("west ");
+            }
+            this.out.println();
+            if (this.currentRoom.inventory != null) {
+                this.out.println("There is a "+this.currentRoom.inventory.name+" on the floor.")
+            }
+        }
+        return false;
+    }
+
 
 }
 
